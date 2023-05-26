@@ -1,0 +1,87 @@
+
+<div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bxl-c-plus-plus icon'></i>
+      <div class="logo_name">CodingLab</div>
+      <i class='bx bx-menu' id="btn" ></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+        <i class='bx bx-search' ></i>
+       <input type="text" placeholder="Search...">
+       <span class="tooltip">Search</span>
+    </li>
+    <li>
+      <a href="/adminHome">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+       <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+     <a href="/add-course">
+      <i class='bx bxs-plus-circle'></i>
+       <span class="links_name">User</span>
+     </a>
+     <span class="tooltip">add Course</span>
+   </li>
+
+   <li class="profile">
+       <a href="/logout">
+        <i class='bx bx-log-out' id="log_out" ></i>
+       </a>
+   </li>
+  </ul>
+</div>
+<section class="home-section">
+    <div class="text">Dashboard</div>
+
+
+<div  class="container">
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead class="thead-primary">
+      <tr>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Link</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="alert" role="alert" *ngFor="let course of Courses | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index">    <td>
+          <div class="img"><img src="{{ course.img }}" alt="img"></div>
+        </td>
+        <td></td>
+        <td>
+          <div class="">
+            <span>{{ course.name }}</span>
+          </div>
+        </td>
+        <td>{{ course.price }}</td>
+        <td>{{ course.description }}</td>
+        <td>{{ course.link }}</td>
+        <td>
+          <a routerLink="/edit-course/{{course.id}}">
+            <i class='bx bx-cog'></i>
+          </a>
+          <a (click)="delete(course.id, 1)">
+            <i class='bx bx-trash'></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<div class="pagination">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>
+</div>
+
+</div>
+</section>
+

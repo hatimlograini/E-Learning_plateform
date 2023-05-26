@@ -1,0 +1,46 @@
+<body>
+
+<div class="container">
+        <div class="screen">
+          <div class="screen__content">
+            <form class="login" (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+               <h2>registartion form</h2>
+              <div class="login__field">
+
+                <input type="text" class="login__input" placeholder="Full name" name="name" ngModel >
+              </div>
+              <div class="login__field">
+
+                <input type="password" class="login__input" placeholder="Email" name="email" ngModel>
+              </div>
+              <div class="login__field">
+
+                <input type="password" class="login__input" placeholder="Password" name="password" ngModel>
+              </div>
+              <div class="login__field">
+
+                <input type="password" class="login__input" placeholder="Retype password" name="password_confirmation" ngModel>
+              </div>
+              <div class="login__field">
+
+                <input type="password" class="login__input" placeholder=" confirm Password">
+              </div>
+              <button type="submit" class="button login__submit">
+                <span class="button__text">sign up</span>
+
+              </button>
+
+            </form>
+            <div class="social-login">
+
+            </div>
+          </div>
+          <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+          </div>
+        </div>
+      </div>
+    </body>

@@ -1,0 +1,110 @@
+<!-- Preloader Start -->
+<!-- Header Start -->
+<div class="header-area header-transparent">
+  <div class="main-header">
+    <div class="header-bottom header-sticky">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Logo -->
+          <div class="col-xl-2 col-lg-2">
+            <div class="logo">
+              <a href="index.html"
+                ><img src="assets/img/logo/logo.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col-xl-10 col-lg-10">
+            <div
+              class="menu-wrapper d-flex align-items-center justify-content-end"
+            >
+              <!-- Main-menu -->
+              <div class="main-menu d-none d-lg-block">
+                <nav>
+                  <ul id="navigation">
+                    <li><a href="/view_courses">Courses</a></li>
+
+                    <!-- Button -->
+                    <li class="button-header margin-left">
+                      <a routerLink="/logout" class="btn">Logout</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Menu -->
+          <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+<main>
+  <!--? slider Area Start-->
+  <section class="slider-area slider-area2">
+    <div class="slider-active">
+      <!-- Single Slider -->
+      <div class="single-slider slider-height2">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-8 col-lg-11 col-md-12">
+              <div class="hero__caption hero__caption2">
+                <h1 data-animation="bounceIn" data-delay="0.2s">Details</h1>
+                <!-- breadcrumb Start-->
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="index.html">Home</a>
+                    </li>
+                  </ol>
+                </nav>
+                <!-- breadcrumb End -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--? Blog Area Start -->
+  <section class="blog_area single-post-area section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 posts-list">
+          <div class="single-post">
+            <div class="feature-img">
+              <img class="img-fluid" src="{{ Course.img }}" alt="" />
+            </div>
+            <div class="blog_details">
+              <h2 style="color: #2d2d2d">
+                {{ Course.name }}
+              </h2>
+              <ul class="blog-info-link mt-3 mb-4"></ul>
+              <p class="excert">
+                {{ Course.description }}
+              </p>
+              <br /><br />
+              <br /><br />
+              <div class="pdf-container">
+                <pdf-viewer
+                  [src]="PDFSRC"
+                  style="width: 1000px; height: 1000px"
+                ></pdf-viewer>
+              </div>
+
+            </div>
+          </div>
+          <!-- Blog Area End -->
+          <div id="back-top">
+            <a title="Go to Top" href="#">
+              <i class="fas fa-level-up-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
